@@ -9,10 +9,12 @@
 
 def are_identical_symbols_same_objects?
   # TODO: Answer the question by making this method to return true or false
+  return true
 end
 
 def are_identical_strings_same_objects?
   # TODO: Answer the question by making this method to return true or false
+  return false
 end
 
 
@@ -22,16 +24,23 @@ end
 
 def convert_string_to_symbol(a_string)
   # TODO: return the symbol version of the parameter `a_string` passed to this method
+  return a_string.to_sym
 end
 
 def convert_symbol_to_string(a_symbol)
   # TODO: return the string version of the parameter `a_symbol` passed to this method
+  return a_symbol.to_s
 end
 
 def me
   # TODO: return a Hash representing yourself, with keys such as age and name
+  {
+    name: "Ilona",
+    age: 42
+  }
 end
 
 def fruits
   # TODO: return an array of fruits
+  return ["pear", "apple"]
 end
