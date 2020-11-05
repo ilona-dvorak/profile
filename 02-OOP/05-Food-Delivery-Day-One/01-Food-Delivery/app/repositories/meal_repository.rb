@@ -14,8 +14,8 @@ class MealRepository
     @next_id += 1
     CSV.open(@csv_file, 'wb') do |csv|
       csv << ["id", "name", "price"]
-      @meals.each do |meal|
-        csv << [meal.id, meal.name, meal.price]
+      @meals.each do |food|
+        csv << [food.id, food.name, food.price]
       end
     end
   end
