@@ -9,12 +9,12 @@ class MealsController
 
   def list
     all_meals = @meal_repository.all
-    @view.display_meals(all_meals)
+    @view.display(all_meals)
   end
 
   def add
-    name = @view.ask_user_for_name
-    price = @view.ask_user_for_price
+    name = @view.ask_user_for('name')
+    price = @view.ask_user_for('price').to_i
     new_meal = Meal.new(name: name, price: price)
     @meal_repository.create(new_meal)
   end
