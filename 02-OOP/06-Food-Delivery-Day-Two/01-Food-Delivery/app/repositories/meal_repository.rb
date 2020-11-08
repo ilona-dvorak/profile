@@ -3,8 +3,6 @@ require_relative '../models/meal'
 require_relative 'base_repository'
 
 class MealRepository < BaseRepository
-  # STATE: 1) which csv file to sotre data in, 2) an array of instances of meal
-
   private
 
   def load_csv
