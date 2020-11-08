@@ -1,13 +1,13 @@
 class Order
-  attr_accessor :id, :meal, :customer, :employee
-  attr_reader :delivered
+  attr_accessor :id
+  attr_reader :customer, :meal, :employee
 
-  def initialize(attributes = {})
-    @id = attributes[:id]
-    @delivered = attributes[:delivered] || false
-    @meal = attributes[:meal]
-    @customer = attributes[:customer]
-    @employee = attributes[:employee]
+  def initialize(attrs = {})
+    @id = attrs[:id]
+    @customer = attrs[:customer]
+    @meal = attrs[:meal]
+    @employee = attrs[:employee]
+    @delivered = attrs[:delivered] || false
   end
 
   def delivered?
