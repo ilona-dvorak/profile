@@ -28,7 +28,7 @@ end
 def love_tracks(db)
   # TODO: return array of love songs' names
   query =
-  " SELECT name FROM tracks
+    "SELECT name FROM tracks
   WHERE name LIKE '%love%'"
   results = db.execute(query)
   return results.flatten
@@ -37,7 +37,7 @@ end
 def long_tracks(db, min_length)
   # TODO: return an array of tracks' names verifying: duration > min_length (minutes) sorted by length (ascending)
   query =
-  " SELECT name FROM tracks
+    "SELECT name FROM tracks
   WHERE milliseconds > #{min_length * 60_000}
   ORDER BY milliseconds ASC"
   result = db.execute(query)
