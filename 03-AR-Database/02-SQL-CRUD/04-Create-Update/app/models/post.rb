@@ -10,4 +10,13 @@ class Post
   end
 
   # TODO
+  def save
+    if @id.nil?
+      DB.execute("INSERT INTO posts (url, votes, title)
+        VALUES ('#{@url}', #{@votes},'#{@title}')")
+      @id = DB.last_insert_row_id
+    else
+      DB.execute("UPDATE posts SET title = '#{title}' WHERE id = #{id}")
+    end
+  end
 end
