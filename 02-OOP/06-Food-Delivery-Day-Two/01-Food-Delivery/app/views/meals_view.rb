@@ -1,17 +1,12 @@
 class MealsView
-  def display_meals(meals)
+  def display(meals)
     meals.each_with_index do |meal, index|
       puts "#{index + 1}. #{meal.name} - €#{meal.price}"
     end
   end
 
-  def ask_user_for_name
-    puts 'What is the name of the meal?'
+  def ask_user_for(something)
+    puts "What is the #{something} of the meal?"
     return gets.chomp
-  end
-
-  def ask_user_for_price
-    puts 'What is the price of the meal?'
-    return gets.chomp.to_i
   end
 end

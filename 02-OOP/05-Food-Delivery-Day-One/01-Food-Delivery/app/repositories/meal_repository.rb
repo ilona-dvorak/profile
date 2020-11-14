@@ -8,9 +8,9 @@ class MealRepository
     load_csv if File.exist?(@csv_file)
   end
 
-  def create(meal)
-    meal.id = @next_id
-    @meals << meal
+  def create(new_meal)
+    new_meal.id = @next_id
+    @meals << new_meal
     @next_id += 1
     CSV.open(@csv_file, 'wb') do |csv|
       csv << ["id", "name", "price"]

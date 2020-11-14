@@ -1,12 +1,12 @@
 class OrdersView
-  def display_all(orders)
-    orders.each do |order|
-      puts "/#{order.customer.name}.*#{order.meal.name}/"
-    end
+  def ask_user_for_index
+    puts "Index?"
+    gets.chomp.to_i - 1
   end
 
-  def ask_for_id(something)
-    puts "Please provide us with id of the #{something} you want to associate to this order:"
-    gets.chomp.to_i
+  def display(orders)
+    orders.each_with_index do |order, index|
+      puts "#{index + 1}. #{order.meal.name} must be delivered by #{order.employee.username} to #{order.customer.name}."
+    end
   end
 end
