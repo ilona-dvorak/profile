@@ -1,0 +1,21 @@
+@import url("http://fonts.googleapis.com/css?family=Open+Sans:400,300,700|Poppins:300,400,500,700");
+
+
+body {
+  font-family: ‘Open Sans’, sans-serif;
+  font-weight: 300;
+  background-color: rgb(250, 250, 250)
+  height: 300;
+}
+h1, h2, a {
+font-family: ‘Poppins’
+}
+img {
+filter: grayscale();
+}
+h2{
+color: rgb(10,190,140);
+}
+a {
+color: rgb(10,100,120);
+}
