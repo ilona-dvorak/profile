@@ -12,7 +12,7 @@ h1, h2, h3 {
 }
 
 h1 {
-  color: 555b6e;
+  color: #013a63;
   font-size: 32px;
   font-weight: 900;
 }
@@ -20,8 +20,9 @@ h1 {
 img {
 filter: grayscale();
 }
+
 h2{
-color: 7d8597;
+color: #002855;
 }
 
 a {
@@ -49,13 +50,13 @@ a:hover {
   border-radius: 50%;
 }
 .btn-blue {
-  background-color: #6B72E1;
+  background-color: #023e7d;
   color: white;
   padding: 15px 20px;
   border-radius: 4px;
 }
 .btn-blue:hover {
-  background-color: black;
+  background-color: #001845;
   color: white;
 }
 .list-inline {
