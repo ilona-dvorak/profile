@@ -1,0 +1,64 @@
+body {
+  font-family: 'Lora', serif;
+  margin: 0;
+}
+
+a {
+  color: #999999;
+  text-decoration: none;
+}
+
+h2 {
+  color: #969696;
+}
+
+h1, h2 {
+  font-family: 'Montserrat', sans-serif;
+}
+
+.banner{
+  background-image: url('https://unsplash.it/900/500');
+  background-size: cover;
+  padding: 100px 0;
+}
+
+.banner h1, .banner p {
+  color: white;
+}
+
+.banner p {
+  opacity: 0.7;
+  font-size: 22px;
+  font-style: italic;
+}
+
+.link-green {
+  background-image: linear-gradient(to bottom, rgba(233, 253, 240, 1), rgba(233, 253, 240, 1));
+  font-size: 25px;
+  font-style: italic;
+  font-weight: lighter;
+  color: #4C4C4C;
+  transition: all 0.3s ease;
+}
+
+.link-green:hover {
+  background-image: linear-gradient(to bottom, rgba(125, 255, 179, 1), rgba(125, 255, 179, 1));
+}
+
+
+.container {
+  width: 60%;
+  margin: 20px auto;
+}
+
+@media (max-width: 800px) {
+  .container {
+    width: 75%;
+  }
+}
+
+@media (max-width: 440px) {
+  .container {
+    width: 90%;
+  }
+}
