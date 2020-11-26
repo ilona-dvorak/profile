@@ -47,4 +47,35 @@ class Post
   def destroy
     DB.execute("DELETE FROM posts WHERE id = ?", id)
   end
+
+  def save
+    @id.nil? ? create : update
+  end
+
+  def upvote!
+    @votes += 1
+  end
+
+  def self.load_post(results)
+    post_id = results["id"]
+    title = results["title"]
+    url = results["url"]
+    votes = results["votes"]
+    Post.new(id: post_id, title: title, url: url, votes: votes)
+  end
+
+  def self.load_all_posts(results)
+    results.map { |result| load_post(result) }
+  end
+
+  def create
+    DB.execute("INSERT INTO posts (title, url, votes) VALUES (?, ?, ?)", @title, @url, @votes)
+    @id = DB.last_insert_row_id
+  end
+
+  def update
+    DB.execute("UPDATE posts set title = ?, url = ?, votes = ? where id = ?", @title, @url, @votes, @id)
+    Post.new(id: id, url: url, votes: votes, title: title)
+  end
+
 end
